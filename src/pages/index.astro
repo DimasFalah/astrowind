@@ -41,7 +41,7 @@ const structuredData = [
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={structuredData} />
 
-<!-- Hero Section (Header Utama) -->
+  <!-- Hero Section (Header Utama) -->
   <div class="pt-12 sm:pt-16 md:pt-24 pb-8">
     <Hero
       tagline="Personal Portfolio"
@@ -52,7 +52,7 @@ const structuredData = [
           href: '#contact',
           icon: 'tabler:mail',
         },
-        { text: 'Lihat Pengalaman', href: '#experience' },
+        { text: 'Lihat Proyek', href: '#projects' },
       ]}
       image={{ src: '~/assets/images/hero-image.png', alt: 'Dimas Falah Portfolio' }}
     >
@@ -129,6 +129,72 @@ const structuredData = [
     </Fragment>
   </Features2>
 
+  <!-- Section Proyek (Projects) ****************** -->
+
+  <!-- Proyek 1 -->
+  <Content
+    id="projects"
+    tagline="Portofolio"
+    title="Proyek Yang Pernah Dikerjakan"
+    subtitle="Beberapa hasil karya dan aplikasi web yang telah saya kembangkan"
+    isReversed
+    items={[
+      {
+        title: 'Fitur Utama',
+        description: 'Autentikasi pengguna, Dashboard interaktif, manajemen data, dan integrasi Payment Gateway.',
+      },
+      {
+        title: 'Teknologi Diterapkan',
+        description: 'React, Node.js, Express, Tailwind CSS, dan PostgreSQL.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Proyek 1 Display',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Aplikasi Web E-Commerce / SaaS
+      </h3>
+      Platform aplikasi web interaktif yang dirancang untuk mempermudah transaksi dan pengelolaan data secara *real-time*.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Proyek 2 -->
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Fitur Utama',
+        description: 'Desain ultra-responsif, Optimasi SEO tinggi, dan pemuatan halaman kurang dari 1 detik.',
+      },
+      {
+        title: 'Teknologi Diterapkan',
+        description: 'Astro, Tailwind CSS, TypeScript, Vercel Deployment.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Proyek 2 Display',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Sistem Informasi / Company Profile
+      </h3>
+      Website modern dengan performa dan skor Lighthouse sempurna untuk meningkatkan kredibilitas merek atau profil institusi.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <!-- Pengalaman / Perjalanan (Timeline) -->
   <Timeline
     id="experience"
@@ -145,7 +211,7 @@ const structuredData = [
       {
         date: '2023 - Sekarang',
         title: 'Pengembangan Proyek Web',
-        description: 'Merancang dan membangun berbagai aplikasi web portofolio, skripsi, dan proyek sistem informasi.',
+        description: 'Merancang dan membangun berbagai aplikasi web portofolio, sistem informasi, serta proyek klien.',
         icon: 'tabler:code',
       },
     ]}
