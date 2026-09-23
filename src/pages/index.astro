@@ -11,7 +11,7 @@ import { SITE, METADATA, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
 
 const metadata = {
-  title: 'Dimas Falah — Personal Portfolio',
+  title: 'Dimas Falah — UI/UX Designer & Frontend Developer',
   ignoreTitleTemplate: true,
 };
 
@@ -61,7 +61,7 @@ const structuredData = [
       </Fragment>
 
       <Fragment slot="subtitle">
-        Seorang Software Engineer / Web Developer yang berfokus pada pengembangan aplikasi web modern, responsif, dan performan tinggi.
+        Seorang UI/UX Designer & Frontend Developer yang berfokus pada perancangan antarmuka visual interaktif serta pengembangan aplikasi web modern yang responsif.
       </Fragment>
     </Hero>
   </div>
@@ -70,19 +70,19 @@ const structuredData = [
   <Content
     id="about"
     tagline="Tentang Saya"
-    title="Membangun Solusi Digital dengan Teknologi Modern"
+    title="Menciptakan Pengalaman Digital Berbasis Desain & Kode"
     items={[
       {
+        title: 'User-Centered Design',
+        description: 'Mendesain antarmuka yang intuitif dan ramah pengguna berdasarkan kebutuhan nyata audiens.',
+      },
+      {
         title: 'Pengembangan Web Responsif',
-        description: 'Membangun antarmuka yang ramah pengguna dan optimal di semua ukuran layar.',
+        description: 'Menerjemahkan desain visual menjadi kode Frontend yang bersih, efisien, dan optimal di semua perangkat.',
       },
       {
-        title: 'Kode Bersih & Efisien',
-        description: 'Menerapkan praktik terbaik dalam penulisan kode untuk kemudahan pemeliharaan jangka panjang.',
-      },
-      {
-        title: 'Kolaborasi & Komunikasi',
-        description: 'Terbiasa bekerja dalam tim maupun mandiri untuk menyelesaikan masalah bisnis.',
+        title: 'Kolaborasi Interdisipliner',
+        description: 'Mampu menjembatani ide desain visual dengan batasan teknis pemrograman secara efektif.',
       },
     ]}
     image={{
@@ -92,7 +92,7 @@ const structuredData = [
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Profil Ringkas</h3>
-      Selamat datang di portofolio saya! Saya memiliki passion dalam dunia teknologi web dan pengembangan perangkat lunak.
+      Selamat datang di portofolio saya! Saya memiliki minat mendalam dalam dunia desain antarmuka (UI/UX) dan pengembangan tampilan web (Frontend Development).
     </Fragment>
 
     <Fragment slot="bg">
@@ -100,21 +100,21 @@ const structuredData = [
     </Fragment>
   </Content>
 
-<!-- Keahlian & Teknologi (Skills) -->
+  <!-- Keahlian & Tools (Skills) -->
   <Features2
     id="skills"
     tagline="Keahlian"
     title="Teknologi & Tools"
-    subtitle="Berikut adalah beberapa teknologi dan tools yang biasa saya gunakan dalam pengerjaan proyek"
+    subtitle="Berikut adalah perangkat lunak dan teknologi yang biasa saya gunakan dalam alur kerja harian"
     items={[
       {
         title: 'UI/UX Design',
-        description: 'Wireframing, Prototyping, Responsive Design, Design Thinking',
-      icon: 'tabler:palette',
+        description: 'Wireframing, Prototyping, Responsive Design, Design Thinking, Figma',
+        icon: 'tabler:palette',
       },
       {
         title: 'Frontend Development',
-        description: 'HTML5, CSS3, JavaScript, Tailwind CSS, React, React Native',
+        description: 'HTML5, CSS3, JavaScript, Tailwind CSS, React, React Native, Astro',
         icon: 'flat-color-icons:template',
       },
       {
@@ -129,35 +129,35 @@ const structuredData = [
     </Fragment>
   </Features2>
 
-  <!-- Section Proyek (Projects) ****************** -->
+  <!-- Section Proyek (Projects) -->
 
   <!-- Proyek 1 -->
   <Content
     id="projects"
     tagline="Portofolio"
     title="Proyek Yang Pernah Dikerjakan"
-    subtitle="Beberapa hasil karya dan aplikasi web yang telah saya kembangkan"
+    subtitle="Beberapa hasil karya perancangan antarmuka dan aplikasi web yang telah saya kembangkan"
     isReversed
     items={[
       {
-        title: 'Fitur Utama',
-        description: 'Autentikasi pengguna, Dashboard interaktif, manajemen data, dan integrasi Payment Gateway.',
+        title: 'Fokus Desain & Fitur',
+        description: 'Eksplorasi UI/UX interaktif, sistem komponen konsisten, serta alur navigasi pengguna yang seamless.',
       },
       {
-        title: 'Teknologi Diterapkan',
-        description: 'React, Node.js, Express, Tailwind CSS, dan PostgreSQL.',
+        title: 'Teknologi & Tools',
+        description: 'Figma, React, Tailwind CSS, dan Vercel Deployment.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
-      alt: 'Proyek 1 Display',
+      alt: 'Tampilan Proyek 1',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Aplikasi Web E-Commerce / SaaS
+        Redesain / Desain Aplikasi Web
       </h3>
-      Platform aplikasi web interaktif yang dirancang untuk mempermudah transaksi dan pengelolaan data secara *real-time*.
+      Perancangan ulang antarmuka aplikasi web untuk meningkatkan kenyamanan visual dan pengalaman pengguna (User Experience).
     </Fragment>
 
     <Fragment slot="bg">
@@ -170,24 +170,24 @@ const structuredData = [
     isAfterContent
     items={[
       {
-        title: 'Fitur Utama',
-        description: 'Desain ultra-responsif, Optimasi SEO tinggi, dan pemuatan halaman kurang dari 1 detik.',
+        title: 'Fokus Desain & Fitur',
+        description: 'Desain ultra-responsif, animasi mikro yang halus, dan performa pemuatan halaman yang sangat cepat.',
       },
       {
-        title: 'Teknologi Diterapkan',
-        description: 'Astro, Tailwind CSS, TypeScript, Vercel Deployment.',
+        title: 'Teknologi & Tools',
+        description: 'Astro, Tailwind CSS, Figma, TypeScript, Vercel.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80',
-      alt: 'Proyek 2 Display',
+      alt: 'Tampilan Proyek 2',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Sistem Informasi / Company Profile
+        Sistem Informasi / Landing Page Modern
       </h3>
-      Website modern dengan performa dan skor Lighthouse sempurna untuk meningkatkan kredibilitas merek atau profil institusi.
+      Pengembangan landing page interaktif dengan memprioritaskan estetika visual modern serta skor performa Lighthouse yang optimal.
     </Fragment>
 
     <Fragment slot="bg">
@@ -195,23 +195,23 @@ const structuredData = [
     </Fragment>
   </Content>
 
-  <!-- Pengalaman / Perjalanan (Timeline) -->
+  <!-- Pengalaman & Pendidikan (Timeline) -->
   <Timeline
     id="experience"
     tagline="Riwayat"
     title="Pengalaman & Pendidikan"
-    subtitle="Latar belakang pendidikan dan pengalaman dalam pengembangan proyek"
+    subtitle="Latar belakang pendidikan dan alur perjalanan saya di bidang desain dan teknologi"
     items={[
       {
         date: '2022 - Sekarang',
         title: 'Pendidikan / Studi',
-        description: 'Fokus pada pengembangan ilmu komputer, struktur data, dan rekayasa perangkat lunak.',
+        description: 'Mempelajari dasar rekayasa perangkat lunak, perancangan antarmuka, dan struktur data.',
         icon: 'tabler:school',
       },
       {
         date: '2023 - Sekarang',
-        title: 'Pengembangan Proyek Web',
-        description: 'Merancang dan membangun berbagai aplikasi web portofolio, sistem informasi, serta proyek klien.',
+        title: 'Eksplorasi UI/UX & Frontend Development',
+        description: 'Merancang *wireframe*, *high-fidelity prototype* di Figma, dan mengimplementasikannya menjadi kode Frontend.',
         icon: 'tabler:code',
       },
     ]}
@@ -235,7 +235,7 @@ const structuredData = [
     </Fragment>
 
     <Fragment slot="subtitle">
-      Tertarik untuk berdiskusi tentang proyek atau peluang kerja sama? Jangan ragu untuk menghubungi saya.
+      Tertarik untuk berdiskusi tentang proyek desain, pengembangan web, atau peluang kolaborasi? Silakan hubungi saya.
     </Fragment>
   </CallToAction>
 </Layout>
