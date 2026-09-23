@@ -41,21 +41,21 @@ const structuredData = [
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={structuredData} />
 
-  <!-- Hero Section (Header Utama) -->
-    <Hero
-      tagline="Personal Portfolio"
-      classes={{ container: 'pt-24 md:pt-36 pb-12 md:pb-20' }}
-      actions={[
-        {
-          variant: 'primary',
-          text: 'Hubungi Saya',
-          href: '#contact',
-          icon: 'tabler:mail',
-        },
-        { text: 'Lihat Pengalaman', href: '#experience' },
-      ]}
-      image={{ src: '~/assets/images/hero-image.png', alt: 'Dimas Falah Portfolio' }}
-    >
+<!-- Hero Section (Header Utama) -->
+  <Hero
+    tagline="Personal Portfolio"
+    classes={{ container: 'pt-28 md:pt-40' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hubungi Saya',
+        href: '#contact',
+        icon: 'tabler:mail',
+      },
+      { text: 'Lihat Pengalaman', href: '#experience' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Dimas Falah Portfolio' }}
+  >
     <Fragment slot="title">
       Halo, Saya <span class="text-accent dark:text-white">Dimas Falah</span>
     </Fragment>
