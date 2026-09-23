@@ -42,28 +42,29 @@ const structuredData = [
   <StructuredData slot="head" schema={structuredData} />
 
 <!-- Hero Section (Header Utama) -->
-  <Hero
-    tagline="Personal Portfolio"
-    classes={{ container: 'pt-48 md:pt-64' }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Hubungi Saya',
-        href: '#contact',
-        icon: 'tabler:mail',
-      },
-      { text: 'Lihat Pengalaman', href: '#experience' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Dimas Falah Portfolio' }}
-  >
-    <Fragment slot="title">
-      Halo, Saya <span class="text-accent dark:text-white">Dimas Falah</span>
-    </Fragment>
+  <div class="pt-24 sm:pt-36 md:pt-48 pb-12">
+    <Hero
+      tagline="Personal Portfolio"
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Hubungi Saya',
+          href: '#contact',
+          icon: 'tabler:mail',
+        },
+        { text: 'Lihat Pengalaman', href: '#experience' },
+      ]}
+      image={{ src: '~/assets/images/hero-image.png', alt: 'Dimas Falah Portfolio' }}
+    >
+      <Fragment slot="title">
+        Halo, Saya <span class="text-accent dark:text-white">Dimas Falah</span>
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      Seorang Software Engineer / Web Developer yang berfokus pada pengembangan aplikasi web modern, responsif, dan performan tinggi.
-    </Fragment>
-  </Hero>
+      <Fragment slot="subtitle">
+        Seorang Software Engineer / Web Developer yang berfokus pada pengembangan aplikasi web modern, responsif, dan performan tinggi.
+      </Fragment>
+    </Hero>
+  </div>
 
   <!-- Tentang Saya (About) -->
   <Content
