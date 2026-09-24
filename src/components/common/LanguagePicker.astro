@@ -1,0 +1,114 @@
+---
+---
+
+<button
+  id="lang-toggle"
+  type="button"
+  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-xs font-bold p-2.5 inline-flex items-center justify-center w-10 h-10 transition cursor-pointer select-none"
+  aria-label="Toggle language"
+>
+  <span id="lang-text" class="uppercase tracking-wider pointer-events-none">ID</span>
+</button>
+
+<script is:inline>
+  const translations = {
+    id: {
+      nav_about: 'Tentang Saya',
+      nav_skills: 'Keahlian',
+      nav_experience: 'Pengalaman',
+      nav_contact: 'Kontak',
+      hero_badge: 'Halo, Saya',
+      hero_role_prefix: 'Seorang',
+      hero_desc: 'yang berfokus pada perancangan antarmuka visual bersih interaktif serta aplikasi web modern.',
+      btn_contact: 'Hubungi Saya',
+      btn_projects: 'Lihat Proyek',
+      about_tagline: 'Tentang Saya',
+      about_title: 'Menciptakan Pengalaman Digital Berbasis Desain & Kode',
+      about_profile_title: 'Profil Ringkas',
+      about_profile_desc: 'Selamat datang di portofolio saya! Saya memiliki minat mendalam dalam dunia desain antarmuka (UI/UX) dan pengembangan tampilan web (Frontend Development).',
+      skills_tagline: 'Keahlian',
+      skills_title: 'Teknologi & Tools',
+      skills_subtitle: 'Perangkat lunak dan teknologi yang saya gunakan untuk mewujudkan konsep desain menjadi produk nyata',
+      projects_tagline: 'Portofolio',
+      projects_title: 'Proyek Yang Pernah Dikerjakan',
+      project_1_desc: 'Perancangan ulang antarmuka aplikasi mobile JKN untuk meningkatkan aksesibilitas layanan kesehatan, kenyamanan visual, serta pengalaman pengguna (User Experience).',
+      project_2_desc: 'Perancangan dan pengembangan platform manajemen tugas interaktif untuk mempermudah kolaborasi tim serta pemantauan progress proyek secara berkala.',
+      history_tagline: 'Riwayat',
+      history_title: 'Pengalaman & Pendidikan',
+      history_subtitle: 'Latar belakang pendidikan dan alur perjalanan saya di bidang desain dan teknologi',
+      contact_title: 'Punya Ide Proyek Menarik?',
+      contact_desc: 'Saya selalu terbuka untuk diskusi mengenai perancangan UI/UX, kolaborasi pengembangan web, atau peluang kerja harian.',
+      contact_btn: 'Mari Bekerja Sama',
+    },
+    en: {
+      nav_about: 'About Me',
+      nav_skills: 'Skills',
+      nav_experience: 'Experience',
+      nav_contact: 'Contact',
+      hero_badge: "Hi, I'm",
+      hero_role_prefix: 'An',
+      hero_desc: 'focused on designing clean, interactive visual interfaces and modern web applications.',
+      btn_contact: 'Contact Me',
+      btn_projects: 'View Projects',
+      about_tagline: 'About Me',
+      about_title: 'Creating Digital Experiences Driven by Design & Code',
+      about_profile_title: 'Brief Profile',
+      about_profile_desc: 'Welcome to my portfolio! I have a deep passion for user interface design (UI/UX) and frontend web development.',
+      skills_tagline: 'Skills',
+      skills_title: 'Technologies & Tools',
+      skills_subtitle: 'Software and technologies I use to bring design concepts into real products',
+      projects_tagline: 'Portfolio',
+      projects_title: 'Featured Projects',
+      project_1_desc: 'Redesigning the Mobile JKN interface to improve healthcare service accessibility, visual comfort, and overall user experience.',
+      project_2_desc: 'Designing and developing an interactive task management platform to streamline team collaboration and project progress tracking.',
+      history_tagline: 'History',
+      history_title: 'Experience & Education',
+      history_subtitle: 'My educational background and journey in design and technology',
+      contact_title: 'Have an Interesting Project Idea?',
+      contact_desc: 'I am always open to discussing UI/UX design, web development collaboration, or work opportunities.',
+      contact_btn: "Let's Work Together",
+    },
+  };
+
+  function applyLanguage(lang) {
+    const dict = translations[lang];
+    if (!dict) return;
+
+    // Ubah semua elemen yang punya atribut data-i18n
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    // Ubah label indikator di tombol
+    const labels = document.querySelectorAll('#lang-text');
+    labels.forEach((label) => {
+      label.textContent = lang.toUpperCase();
+    });
+
+    localStorage.setItem('app_lang', lang);
+  }
+
+  function initLang() {
+    const savedLang = localStorage.getItem('app_lang') || 'id';
+    applyLanguage(savedLang);
+  }
+
+  // Event listener tombol
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('#lang-toggle');
+    if (btn) {
+      const current = localStorage.getItem('app_lang') || 'id';
+      const next = current === 'id' ? 'en' : 'id';
+      applyLanguage(next);
+    }
+  });
+
+  // Jalankan saat load awal & navigasi Astro
+  document.addEventListener('astro:page-load', initLang);
+  document.addEventListener('DOMContentLoaded', initLang);
+  initLang();
+</script>

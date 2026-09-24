@@ -1,38 +1,32 @@
-import { getPermalink } from './utils/permalinks';
-
 export const headerData = {
   links: [
     {
       text: 'Tentang Saya',
-      href: getPermalink('/#about'),
+      href: '#about',
+      i18n: 'nav_about',
     },
     {
       text: 'Keahlian',
-      href: getPermalink('/#skills'),
+      href: '#skills',
+      i18n: 'nav_skills',
     },
     {
       text: 'Pengalaman',
-      href: getPermalink('/#experience'),
+      href: '#experience',
+      i18n: 'nav_experience',
     },
     {
       text: 'Kontak',
-      href: getPermalink('/#contact'),
+      href: '#contact',
+      i18n: 'nav_contact',
     },
   ],
-  actions: [{ text: 'Download CV', href: '#', target: '_blank' }],
-};
-
-export const footerData = {
-  links: [],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+  actions: [
+    {
+      text: 'Download CV',
+      href: '/cv_dimas.pdf', // Mengarah ke public/cv_dimas.pdf
+      target: '_blank',
+      download: 'cv_dimas.pdf', // Mengaktifkan fitur auto-download
+    },
   ],
-  socialLinks: [
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/DimasFalah' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com' },
-  ],
-  footNote: `
-    © ${new Date().getFullYear()} Dimas Falah. All rights reserved.
-  `,
 };
