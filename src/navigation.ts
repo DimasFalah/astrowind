@@ -30,3 +30,10 @@ export const headerData = {
     },
   ],
 };
+
+export const footerData = {
+  links: [],
+  secondaryLinks: [],
+  socialLinks: [],
+  footNote: `© 2026 Dimas Falah. All rights reserved.`,
+};
